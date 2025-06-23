@@ -24,11 +24,11 @@ public class CustomUserDetails implements UserDetails {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
 
 //        map each role name
-        user.getRole().forEach(roles ->
-                authorities.add(new SimpleGrantedAuthority(role.getName())));
+        user.getRoles().forEach(roles ->
+                authorities.add(new SimpleGrantedAuthority(roles.getName())));
 
 //      map each permission name (e.g MANAGE_USERS)
-        user.getRole().stream()
+        user.getRoles().stream()
                 .flatMap(role -> role.getPermissions().stream())
                 .map(perm -> new SimpleGrantedAuthority(perm.getName()))
                 .forEach(authorities::add);
@@ -51,18 +51,18 @@ public class CustomUserDetails implements UserDetails {
         return true;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return user.getStatus() != UserStatus.LOCKED;
-    }
+//    @Override
+//    public boolean isAccountNonLocked() {
+//        return user.getStatus() != UserStatus.LOCKED;
+//    }
 
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
-
-    @Override
-    public boolean isEnabled() {
-        return user.getStatus() == UserStatus.ACTIVE;
-    }
+//
+//    @Override
+//    public boolean isEnabled() {
+//        return user.getStatus() == UserStatus.ACTIVE;
+//    }
 }

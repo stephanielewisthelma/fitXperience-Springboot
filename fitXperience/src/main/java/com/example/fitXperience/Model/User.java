@@ -6,10 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
-    @Entity
+@Entity
     public class User {
         @Id @GeneratedValue
         private Long id;
@@ -19,8 +21,10 @@ import java.util.List;
         private String phone;
         private String gender;
 
-        @Enumerated(EnumType.STRING)
-        private Role role;
+//        @Enumerated(EnumType.STRING)
+//        private Roles role;
+
+        private Set<Roles> role = new HashSet<>();
 
         // Bookings
         @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
@@ -29,7 +33,7 @@ import java.util.List;
         public User() {
         }
 
-        public User(Long id, String name, String email, String password, String phone, String gender, Role role, List<Booking> bookings) {
+        public User(Long id, String name, String email, String password, String phone, String gender, Set<Roles> role, List<Booking> bookings) {
             this.id = id;
             this.name = name;
             this.email = email;
@@ -88,12 +92,12 @@ import java.util.List;
             this.phone = phone;
         }
 
-        public Role getRole() {
+        public Set<Roles> getRoles() {
             return role;
         }
 
-        public void setRole(Role role) {
-            this.role = role;
+        public void setRole(Set<Roles> roles) {
+            this.role = roles;
         }
 
         public List<Booking> getBookings() {
