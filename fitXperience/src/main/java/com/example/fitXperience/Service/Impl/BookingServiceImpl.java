@@ -1,8 +1,18 @@
 package com.example.fitXperience.Service.Impl;
 
+import com.example.fitXperience.Dto.BookingRequest;
 import com.example.fitXperience.Model.Booking;
+import com.example.fitXperience.Model.Package;
+import com.example.fitXperience.Model.User;
+import com.example.fitXperience.Repository.BookingRepository;
+import com.example.fitXperience.Repository.PackageRepository;
+import com.example.fitXperience.Repository.UserRepository;
+import com.example.fitXperience.Service.BookingService;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service

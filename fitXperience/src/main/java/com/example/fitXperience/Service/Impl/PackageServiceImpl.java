@@ -1,5 +1,6 @@
 package com.example.fitXperience.Service.Impl;
 
+import com.example.fitXperience.Model.Package;
 import com.example.fitXperience.Repository.PackageRepository;
 import com.example.fitXperience.Service.PackageService;
 import org.springframework.beans.factory.annotation.Autowired;

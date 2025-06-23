@@ -1,5 +1,6 @@
 package com.example.fitXperience.Controller;
 
+import com.example.fitXperience.Model.Package;
 import com.example.fitXperience.Service.PackageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

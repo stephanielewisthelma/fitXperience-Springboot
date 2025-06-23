@@ -1,6 +1,7 @@
 package com.example.fitXperience.Service.Impl;
 
 import com.example.fitXperience.Dto.RegisterRequest;
+import com.example.fitXperience.Model.Role;
 import com.example.fitXperience.Model.User;
 import com.example.fitXperience.Repository.UserRepository;
 import com.example.fitXperience.Service.UserService;
