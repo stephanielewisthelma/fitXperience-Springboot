@@ -7,7 +7,7 @@ import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
 
-public class Booking {
+
     @Entity
     public class Booking {
         @Id
@@ -24,4 +24,4 @@ public class Booking {
         private boolean paid;
     }
 
-}
+

@@ -8,7 +8,7 @@ import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Package {
+
     @Entity
     public class Package {
         @Id
@@ -23,4 +23,4 @@ public class Package {
         private List<Booking> bookings = new ArrayList<>();
     }
 
-}
+

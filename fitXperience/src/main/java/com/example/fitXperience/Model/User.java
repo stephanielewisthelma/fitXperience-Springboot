@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+
     @Entity
     public class User {
         @Id @GeneratedValue
@@ -24,4 +24,4 @@ public class User {
         private List<Booking> bookings = new ArrayList<>();
     }
 
-}
+
