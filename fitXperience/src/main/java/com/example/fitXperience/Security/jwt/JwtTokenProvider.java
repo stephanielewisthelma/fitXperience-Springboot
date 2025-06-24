@@ -81,6 +81,10 @@ public class JwtTokenProvider {
         return claims.getSubject();
     }
 
+    public long getValidityInMilliseconds() {
+        return validityInMilliseconds;
+    }
+
 //    @return token validity in milliseconds
 
 //    public long getValidityInMilliseconds() {
